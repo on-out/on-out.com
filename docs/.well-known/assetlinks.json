@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.onout.todaymycloset",
+      "sha256_cert_fingerprints": [
+        "85:2E:7C:E9:5E:94:37:DF:DF:28:69:B1:F3:18:0E:57:91:90:E5:B5:F2:BE:BB:92:3D:F4:1E:B5:69:63:09:E3"
+      ]
+    }
+  }
+]
