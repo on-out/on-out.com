@@ -6,7 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>오늘나의옷장</title>
   </head>
-  <body>
+  <body style="margin: 0;padding: 0; background-color: #191919;">
+    <section style="width:100%; height:100vh; background-color:#191919; color:white; display:flex; flex-direction : column; align-items: center; justify-content: space-between;">
+      <img style="margin-top: 50px;"  width="200px" src="LOGO.png" />
+      <div style="width:100%;  display: flex; flex-direction: column; align-items: center;">
+        <div style="width : 100%; display:flex; justify-content:start; margin-top: 28px; margin-left: 40px;">
+          <h1>당신이 가장<br/> 좋아하는 옷,</h1>
+        </div> 
+        <img width="300px" height="300px" src="cloth.png" />
+        <div style="width : 100%; display:flex; justify-content:end; margin-right: 40px;">
+          <h1>비슷한 핏에<br/>다른 디자인을<br/>찾고 계신가요?</h1>
+        </div> 
+      </div>
+      <div style=" margin-bottom: 50px; display:flex; justify-content: center; margin-top:20px">
+        <img onclick="onClick()" style="margin-right: 10px ;" src="google.png"/>
+        <img onclick="onClick()" src="apple.png"/>
+      </div>
+    </section>
     <img style="width: 100%; height: 100%" src="./image.png" />
   </body>
+  <script>
+    function onClick () {
+      window.open('https://app.on-out.com/store', '', '_blank')
+    }
+  </script>
 </html>
