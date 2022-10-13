@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css" rel="stylesheet" type="text/css" />
     <title>오늘나의옷장</title>
     <script>
       function init() {
@@ -13,42 +14,57 @@
 
       function setImage() {
         var section = document.getElementById("firstsection");
-        var imageSection = document.getElementById("image")
+        var imageSection = document.getElementById("image");
         var width = window.innerWidth ?? window.document.documentElement.clientWidth;
         if (width > 720) {
-          section.style = "display : none"
-          imageSection.src = "./desktopImage.png"
+          section.style.display = "none";
+          imageSection.src = "./desktopImage.png";
         } else {
-          section.style.visibility = 'visible'
-          imageSection.src = "./mobileImage.png"
+          section.style.display = "flex";
+          imageSection.src = "./mobileImage.png";
         }
       }
 
       window.addEventListener("DOMContentLoaded", init);
     </script>
   </head>
-  <body style="margin: 0;padding: 0; background-color: #191919;">
-    <section id="firstsection" style="width:100%; height:100vh; background-color:#191919; color:white; display:flex; flex-direction : column; align-items: center; justify-content: space-between;">
-      <img style="margin-top: 50px;"  width="200px" src="LOGO.svg" />
-      <div style="width:100%;  display: flex; flex-direction: column; align-items: center;">
-        <div style="width : 100%; display:flex; justify-content:start; margin-top: 28px; margin-left: 40px;">
-          <h1>당신이 가장<br/> 좋아하는 옷,</h1>
-        </div> 
+  <body
+    style="margin: 0; padding: 0; background-color: #191919; font-family: 'Spoqa Han Sans Neo', 'sans-serif'"
+  >
+    <section
+      id="firstsection"
+      style="
+        width: 100%;
+        height: 100vh;
+        background-color: #191919;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      "
+    >
+      <img style="margin-top: 50px" width="200px" src="LOGO.svg" />
+      <div style="width: 100%; display: flex; flex-direction: column; align-items: center">
+        <div style="width: 100%; display: flex; justify-content: start; margin-top: 28px; margin-left: 40px">
+          <h1>
+            당신이 가장<br />
+            좋아하는 옷,
+          </h1>
+        </div>
         <img width="300px" height="300px" src="cloth.png" />
-        <div style="width : 100%; display:flex; justify-content:end; margin-right: 40px;">
-          <h1>비슷한 핏에<br/>다른 디자인을<br/>찾고 계신가요?</h1>
-        </div> 
+        <div style="width: 100%; display: flex; justify-content: end; margin-right: 40px">
+          <h1>비슷한 핏에<br />다른 디자인을<br />찾고 계신가요?</h1>
+        </div>
       </div>
-      <div style=" margin-bottom: 50px; display:flex; justify-content: center; margin-top:20px">
-        <img onclick="onClick()" style="margin-right: 10px ;" src="google.png"/>
-        <img onclick="onClick()" src="apple.png"/>
+      <div style="margin-bottom: 50px; display: flex; justify-content: center; margin-top: 20px">
+        <a href="https://play.google.com/store/apps/details?id=com.onout.todaymycloset" target="_blank">
+          <img width="146" style="margin-right: 10px" src="google.png" />
+        </a>
+        <a href="https://apps.apple.com/app/id1642021729" target="_blank">
+          <img width="146" src="apple.png" />
+        </a>
       </div>
     </section>
     <img id="image" style="width: 100%; height: 100%" src="./mobileImage.png" />
   </body>
-  <script>
-    function onClick () {
-      window.open('https://api.on-out.com/store', '', '_blank')
-    }
-  </script>
 </html>
