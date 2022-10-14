@@ -5,30 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>오늘나의옷장</title>
-    <script>
-      function init() {
-        setImage();
-        setInterval(setImage, 1000);
-      }
-
-      function setImage() {
-        var section = document.getElementById("firstsection");
-        var imageSection = document.getElementById("image")
-        var width = window.innerWidth ?? window.document.documentElement.clientWidth;
-        if (width > 720) {
-          section.style = "display : none"
-          imageSection.src = "./desktopImage.png"
-        } else {
-          section.style.visibility = 'visible'
-          imageSection.src = "./mobileImage.png"
-        }
-      }
-
-      window.addEventListener("DOMContentLoaded", init);
-    </script>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body style="margin: 0;padding: 0; background-color: #191919;">
-    <section id="firstsection" style="width:100%; height:100vh; background-color:#191919; color:white; display:flex; flex-direction : column; align-items: center; justify-content: space-between;">
+  <body>
+    <section class="section-desktop" id="firstsection" >
       <img style="margin-top: 50px;"  width="200px" src="LOGO.svg" />
       <div style="width:100%;  display: flex; flex-direction: column; align-items: center;">
         <div style="width : 100%; display:flex; justify-content:start; margin-top: 28px; margin-left: 40px;">
@@ -44,7 +24,8 @@
         <img onclick="onClick()" src="apple.png"/>
       </div>
     </section>
-    <img id="image" style="width: 100%; height: 100%" src="./mobileImage.png" />
+    <img class="image-mobile" style="width: 100%; height: 100%" src="./mobileImage.png" />
+    <img class="image-desktop" style="width: 100%; height: 100%" src="./desktopImage.png" />
   </body>
   <script>
     function onClick () {

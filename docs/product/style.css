@@ -1,0 +1,52 @@
+html,
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #191919;
+}
+
+#main-img.desktop {
+  height: 99vh;
+}
+
+#main-img.mobile {
+  width: 100%;
+}
+
+section {
+    width:100%; 
+    height:100vh; 
+    background-color:#191919; 
+    color:white; 
+    display:flex; 
+    flex-direction : column; 
+    align-items: center; 
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 720px) {
+   /* 모바일 */
+   .image-mobile {
+    /* content: url("images/mobileImage.png"); */
+    display:visible
+   }
+   .image-desktop {
+    display:none
+   }
+   .section-desktop {
+    display: visible;
+   }
+}
+
+@media screen and (min-width : 720px) {
+ .image-desktop{
+    display:visible;
+  }
+  .image-mobile {
+    display: none;
+  }
+  .section-desktop {
+    display: none;
+}
+}
