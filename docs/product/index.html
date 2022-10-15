@@ -5,27 +5,86 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>오늘나의옷장</title>
-    <link rel="stylesheet" href="style.css" />
+    <link href="style.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <section class="section-desktop" id="firstsection" >
-      <img style="margin-top: 50px;"  width="200px" src="LOGO.svg" />
-      <div style="width:100%;  display: flex; flex-direction: column; align-items: center;">
-        <div style="width : 100%; display:flex; justify-content:start; margin-top: 28px; margin-left: 40px;">
-          <h1>당신이 가장<br/> 좋아하는 옷,</h1>
-        </div> 
-        <img width="300px" height="300px" src="cloth.png" />
-        <div style="width : 100%; display:flex; justify-content:end; margin-right: 40px;">
-          <h1>비슷한 핏에<br/>다른 디자인을<br/>찾고 계신가요?</h1>
-        </div> 
-      </div>
-      <div style=" margin-bottom: 50px; display:flex; justify-content: center; margin-top:20px">
-        <img onclick="onClick()" width="30%" style="margin-right: 10px ;" src="google.png"/>
-        <img onclick="onClick()" width="30%" src="apple.png"/>
-      </div>
-    </section>
-    <img class="image-mobile" style="width: 100%; height: 100%" src="./mobileImage.png" />
-    <img class="image-desktop" style="width: 100%; height: 100%" src="./desktopImage.png" />
+  <body class="w-full h-screen">
+    <img class="w-full image-desktop" src="/images/desktopImage.png" />
+    <article class="w-full h-screen overflow-auto image-mobile" style="scroll-snap-type: y; 	scroll-snap-type: y mandatory">
+      <section style="scroll-snap-align: start;" class="w-full h-screen overflow-auto bg-[#191919] flex flex-col items-center" >
+        <img style="margin-top: 50px;"  width="213px" src="/images/LOGO.svg" />
+        <div style="display: flex; flex-direction: column; align-items: center;" class="w-full font-[500] font-bold text-[30px]">
+          <div class="w-[90%]" style="display:flex; justify-content:start; margin-top: 28px;">
+            <h1>당신이 가장<br/> 좋아하는 옷,</h1>
+          </div> 
+          <img width="250px"  src="/images/cloth.png" />
+          <div class="w-[90%]"  style=" display:flex; justify-content:end;"  class="text-white">
+            <h1>비슷한 핏에<br/>다른 디자인을<br/>찾고 계신가요?</h1>
+          </div> 
+        </div>
+        <div class="w-full flex flex-col items-center mt-[25px]">
+          <img onclick="onClick()" width="90%" src="/images/download.png" />
+          <div class="w-full" style="margin-bottom: 50px; display:flex; justify-content: center; margin-top:10px">
+            <img onclick="onClick()" width="45%" src="/images/apple.png"/>
+            <img onclick="onClick()" width="45%" src="/images/google.png"/>
+          </div>
+        </div>
+      </section>
+      <section style="scroll-snap-align: start;" class="w-full h-screen flex flex-col items-center justify-center">
+        <div class="flex flex-col items-center">
+          <h1 class="font-bold text-[21px] text-center">
+            내 옷과 같은 핏에<br/>디자인의 옷들만
+          </h1>
+          <h4 class="mt-2 text-center font-medium text-[10px] text-[#a3a3a3]">
+            다양한 필터링을 통해 더 섬세한 추천을 받고<br/>
+            원하는 핏의 옷들만 비교하여 쇼핑하세요
+          </h4>
+        </div>
+        <img class="mt-[18px]" width="207px" src="/images/page/page1.png"/>
+      </section>
+      <section style="scroll-snap-align: start;" class="w-full h-screen flex flex-col items-center justify-center">
+        <div class="flex flex-col items-center">
+          <h1 class="font-bold text-[21px] text-center">
+            사이즈 선택 고민없이<br/>구매를 결정하고
+          </h1>
+          <h4 class="mt-2 text-center font-medium text-[10px] text-[#a3a3a3]">
+            정확한 실측사이즈 기반으로 사이즈 결정을<br/>
+            대신 도와드립니다.
+          </h4>
+        </div>
+        <img class="mt-[18px]" width="207px" src="/images/page/page2.png"/>
+      </section>
+      <section style="scroll-snap-align: start;" class="w-full h-screen flex flex-col items-center justify-center">
+        <div class="flex flex-col items-center">
+          <h1 class="font-bold text-[21px] text-center">
+            브랜드 공식 온라인<br/>스토어로 이동
+          </h1>
+          <h4 class="mt-2 text-center font-medium text-[10px] text-[#a3a3a3]">
+            브랜드 자사몰을 통해 안전하게 쇼핑하세요.
+          </h4>
+        </div>
+        <img class="mt-[18px]" width="207px" src="/images/page/page3.png"/>
+      </section>
+      <section style="scroll-snap-align: start;" class="w-full h-screen flex flex-col items-center overflow-auto">
+        <h1 class="font-bold text-[21px] text-center pt-[40px]">
+          <p>실측사이즈 기반<br/>온라인 쇼핑 플랫폼</p>
+        </h1>
+        <img class="mt-[18px] pb-[40px]" width="207px" src="/images/page/page4.png"/>
+      </section>
+      <section style="scroll-snap-align: start;" class="w-full h-screen flex flex-col items-center justify-center">
+        <img style="margin-top: 50px;"  width="160px" src="/images/LOGO.svg" />
+        <h1 class="text-center mt-[20px] font-bold text-[24px]">오늘 바로 이용해보세요.</h1>
+        <p class="text-center text-[#a3a3a3] font-medium text-[10px] mt-[8px]">QR코드를 스캔하여 앱을 다운받으세요</p>
+        <img style="margin-top: 25px;"  width="71px" height="71px" src="/images/qr.png" />
+        <div class="w-full flex flex-col items-center mt-[40px]">
+          <img onclick="onClick()" width="90%" src="/images/download.png" />
+          <div class="w-full" style="margin-bottom: 50px; display:flex; justify-content: center; margin-top:10px">
+            <img onclick="onClick()" width="45%" src="/images/apple.png"/>
+            <img onclick="onClick()" width="45%" src="/images/google.png"/>
+          </div>
+        </div>
+      </section>
+    </article>
   </body>
   <script>
     function onClick () {

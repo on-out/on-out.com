@@ -4,9 +4,6 @@ body {
   margin: 0;
   padding: 0;
   background-color: #191919;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 #main-img.desktop {
@@ -20,12 +17,12 @@ body {
 @media screen and (max-width: 720px) {
    /* 모바일 */
    img {
-    content: url("images/main-mobile.png");
+    content: url("/images/main-mobile.png");
    }
 }
 
 @media screen and (min-width : 720px) {
   img{
-    content : url("images/main-desktop.png")
+    content : url("/images/main-desktop.png")
   }
 }
