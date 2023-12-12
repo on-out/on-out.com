@@ -2,9 +2,17 @@
   "applinks": {
     "details": [
       {
-        "appID": "2343G2K53T.com.onout.app",
+        "appId": "2343G2K53T.com.onout.app",
         "paths": [
           "*"
+        ],
+        "appIDs": [
+          "2343G2K53T.com.onout.app"
+        ],
+        "components": [
+          {
+            "/": "*"
+          }
         ]
       }
     ]
