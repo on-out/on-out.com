@@ -5,9 +5,9 @@
     ],
     "target": {
       "namespace": "android_app",
-      "package_name": "com.onout.todaymycloset",
+      "package_name": "com.onout.app",
       "sha256_cert_fingerprints": [
-        "85:2E:7C:E9:5E:94:37:DF:DF:28:69:B1:F3:18:0E:57:91:90:E5:B5:F2:BE:BB:92:3D:F4:1E:B5:69:63:09:E3"
+        "EC:3D:74:34:47:2C:EC:CE:50:83:DE:EA:72:FC:1E:3A:73:F0:AF:0E:03:D4:A7:A1:EE:75:08:76:62:E5:EC:C9"
       ]
     }
   }

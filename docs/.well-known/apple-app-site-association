@@ -3,12 +3,10 @@
     "details": [
       {
         "appIDs": [
-          "2343G2K53T.com.onout.todaymycloset"
+          "2343G2K53T.com.onout.app"
         ],
         "components": [
-          {
-            "/": "/*"
-          }
+          "*"
         ]
       }
     ]
