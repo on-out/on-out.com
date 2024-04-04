@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>온아웃</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" >
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+        <link rel="stylesheet" as="style" href="./style.css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <meta name="apple-itunes-app" content="app-id-6446235118" />
+    </head>
+    <body class="!font-['pretendard'] w-full h-full bg-black flex items-center justify-center">
+        <div onclick="openApp()" class="flex flex-col gap-[4rem] items-center">
+            <img class='h-[4rem] object-center' src='../icons/LOGO.svg' />
+            <div class="flex flex-col items-center gap-y-[12px]">
+                <p class="text-white">온아웃 앱으로 이동 중...</p>
+                <button class="px-6 py-4 bg-[#2C1FC7] text-white rounded-[24px]">온아웃 앱에서 영상 확인 하기</button>
+            </div>
+        </div>
+    </body>
+    <script>
+        const openApp = () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const rawVideoId  = urlParams.get('videoId')
+
+            const videoId = rawVideoId ? Number(rawVideoId) : undefined 
+
+            if(videoId && !Number.isNaN(videoId)){
+                window.location.href = `onout://action?videoId=${videoId}`
+            }else{
+                alert("잘못된 주소입니다.")
+            }
+        
+        }
+
+        window.onload = () => {
+            setTimeout(() => {
+                openApp()
+            }, 1000)
+        }
+    </script>
+</html>
