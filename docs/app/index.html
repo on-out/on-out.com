@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>온아웃</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
+    />
+    <link rel="stylesheet" as="style" href="../style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="apple-itunes-app" content="app-id-6446235118" />
+  </head>
+  <body
+    class="!font-['pretendard'] w-full h-full bg-black flex items-center justify-center"
+  >
+    <div onclick="openApp()" class="flex flex-col gap-[4rem] items-center">
+      <img class="h-[4rem] object-center" src="../icons/LOGO.svg" />
+      <div class="flex flex-col items-center gap-y-[12px]">
+        <p class="text-white">온아웃 앱으로 이동 중...</p>
+        <button class="px-6 py-4 bg-[#2C1FC7] text-white rounded-[24px]">
+          클릭해서 앱으로 이동하기
+        </button>
+      </div>
+    </div>
+  </body>
+  <script>
+    const openApp = () => {
+      try {
+        window.location.href = `onout://action`;
+      } catch (e) {
+        window.location.href = "https://server.on-out.com:10445/app/store";
+      }
+    };
+
+    window.onload = () => {
+      setTimeout(() => {
+        openApp();
+      }, 1000);
+    };
+  </script>
+</html>
