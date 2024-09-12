@@ -1,6 +1,25 @@
 {
   "applinks": {
     "apps": [],
-    "details": []
+    "details": [
+      {
+        "appID": "2343G2K53T.com.onout.local.app",
+        "paths": [
+          "*"
+        ]
+      },
+      {
+        "appID": "2343G2K53T.com.onout.dev.app",
+        "paths": [
+          "*"
+        ]
+      },
+      {
+        "appID": "2343G2K53T.com.onout.app",
+        "paths": [
+          "*"
+        ]
+      }
+    ]
   }
 }
